@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding:0;
+}
+.container{
+	height: 100vh;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom right,rgb(238 130 238),rgb(75 0 130),rgb(0 0 255),rgb(0 128 0),rgb(255 255 0),rgb(255 165 0),rgb(255 0 0) );
+}
+.input{
+   
+}
+.input input{
+    width: 99%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    background-color: black;
+    border: none;
+}
+.box{
+    margin-top: 2vh;
+    height: 42vh;
+    padding: 12px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box1{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.layer1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: end;
+}
+.btn{
+    width: 7vh;
+    height: 7vh;
+    cursor: pointer;
+    font-size: 1.5rem;   
+    margin: 12px;
+    font-weight: bold;
+}   
+#orang{
+    color: orange;
+}
+#orang1{
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 100px;
+    background-color: orange;
+    color: white;
+}
+
+@media only screen and (max-width: 335px){
+    .box{
+        background-color: transparent;
+    }
+    .btn{
+        margin: 0px; 
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="calc.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="input">
+    <input placeholder="Input" id="input">
+  </div>
+  <div class="box">
+
+    <div class="box1">
+      <div class="layer1">
+        <button class="btn" id="orang">C</button>
+        <button class="btn" id="orang">(</button>
+        <button class="btn" id="orang">%</button>
+        <button class="btn" id="orang">/</button>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="layer1">
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn" id="orang">*</button>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="layer1">
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn" id="orang">-</button>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="layer1">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn" id="orang">+</button>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="layer1">
+        <button class="btn" id="orang">)</button>
+        <button class="btn">0</button>
+        <button class="btn" id="orang" style="font-size: 3rem;">.</button>
+        <button class="btn" id="orang1">=</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  let input = document.getElementById("input")
+  let button = document.querySelectorAll("button")
+  let value = ""
+  input.addEventListener("input",(e)=>{
+    value = e.target.value
+  })
+
+  input.addEventListener("keydown",(e)=>{
+    if(e.key=="Enter"){
+      value = eval(value)
+      input.value = value
+    }
+  })
+
+
+  button.forEach((element)=>{
+    element.addEventListener("click",(e)=>{
+     let text =  e.target.innerText
+     if(text=='C'){
+      value = ""
+        input.value = ""
+     }
+
+     else if(text=="="){
+        value = eval(value)
+         input.value = value
+     }
+     else{
+      value = value+text
+       input.value = value
+     }
+
+
+    })
+  })
+
+</script>
+
+</body>
+</html>
